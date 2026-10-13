@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7f2;
+  --foreground: #1c2a1e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-be-vietnam-pro);
+
+  /* Dòng mới trong bảng so sánh nháy vàng nhẹ */
+  --animate-flash: flash 1.6s ease-out;
+  @keyframes flash {
+    0% {
+      background-color: #fef08a;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-be-vietnam-pro), system-ui, sans-serif;
+}
